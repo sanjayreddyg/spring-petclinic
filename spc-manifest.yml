@@ -1,0 +1,18 @@
+---
+apiversion: v1/apps
+kind: Deployment
+metadata:
+  name: spc
+  namespace: dev
+  labels:
+    app: spring-petclinic
+spec:
+  template:
+    metadata:
+      labels:
+        app: spring-petclinic
+  spec:
+    containers:
+      - image: sanjaygreddy/spring-petclinic:1.0
+    ports:
+      - containerport: 8080
