@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('Deploying application') {
             steps{
-                   sh 'kubectl apply -f spc-qa.yaml'
+                   sh 'kubectl apply -f spc-qa.yml'
 
                 }
         }
