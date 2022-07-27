@@ -12,6 +12,9 @@ pipeline{
                    sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
                    sh 'docker tag spring-petclinic:latest sanjaygreddy/spring-petclinic:$BUILD_NUMBER'
                    sh 'docker push sanjaygreddy/spring-petclinic:$BUILD_NUMBER'
+                   sh 'docker tag spring-petclinic:latest sanjaygreddy/spring-petclinic:latest'
+                   sh 'docker push sanjaygreddy/spring-petclinic:latest'
+
             }
           }
         }
